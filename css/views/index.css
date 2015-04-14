@@ -142,3 +142,6 @@ main[role="main"] {
 .js .main {
   opacity: 0;
 }
+footer {
+  position: absolute;
+}

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "62faf6779add5186974bc35ca3ad95a7",
+    "hash": "37de1c14b95f4ecb7279442a867218fc",
     "packages": [
         {
             "name": "etdsolutions/jquery",
@@ -51,6 +51,37 @@
             "description": "Shim repository for Modernizr",
             "homepage": "http://modernizr.com",
             "time": "2014-12-23 13:54:09"
+        },
+        {
+            "name": "etdsolutions/salvattore",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/etd-framework/salvattore.git",
+                "reference": "cadb4fb1600dc2fa05cf7a105dfae334a95967a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/etd-framework/salvattore/zipball/cadb4fb1600dc2fa05cf7a105dfae334a95967a4",
+                "reference": "cadb4fb1600dc2fa05cf7a105dfae334a95967a4",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rolando Murillo"
+                },
+                {
+                    "name": "Giorgio Leveroni"
+                }
+            ],
+            "description": "Shim repository for Salvattore",
+            "homepage": "http://salvattore.com",
+            "time": "2015-04-01 09:46:35"
         },
         {
             "name": "fortawesome/font-awesome",

@@ -318,7 +318,9 @@ figure {
 img {
   vertical-align: middle;
 }
-.img-responsive {
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -3162,6 +3164,32 @@ fieldset[disabled] .navbar-inverse .btn-link:hover,
 fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444444;
 }
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fbfbfb;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+.thumbnail > img,
+.thumbnail a > img {
+  margin-left: auto;
+  margin-right: auto;
+}
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #5864a7;
+}
+.thumbnail .caption {
+  padding: 9px;
+  color: #000000;
+}
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,
@@ -5472,6 +5500,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 main[role="main"] {
   padding-top: 50px;
+  padding-bottom: 30px;
 }
 main[role="main"] header h1 {
   margin: 0;
@@ -5551,7 +5580,7 @@ fieldset[disabled] .btn-transparent.active {
   background-color: #ffffff;
 }
 footer {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;

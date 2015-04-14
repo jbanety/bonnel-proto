@@ -13,6 +13,7 @@
     "require": {
         "etdsolutions/modernizr": "~2.0",
         "etdsolutions/jquery": "~1.0",
+        "etdsolutions/salvattore": "~1.0",
         "twbs/bootstrap": "~3.0",
         "fortawesome/font-awesome": "~4.0"
     }
