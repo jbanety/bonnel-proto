@@ -1,0 +1,19 @@
+{
+    "name": "jbanety/etd_pepicaso",
+    "type": "project",
+    "description": "Template pour le site de la Pépinière de la CASO",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Jean-Baptiste Alleaume",
+            "email": "jb.alleaume@etd-solutions.com",
+            "homepage": "http://alleau.me"
+        }
+    ],
+    "require": {
+        "etdsolutions/modernizr": "~2.0",
+        "etdsolutions/jquery": "~1.0",
+        "twbs/bootstrap": "~3.0",
+        "fortawesome/font-awesome": "~4.0"
+    }
+}

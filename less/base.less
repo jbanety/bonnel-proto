@@ -1,0 +1,237 @@
+/*
+ * @package      Template pour la pépinière d'entreprises de la CASO
+ *
+ * @version      1.0
+ * @copyright    Copyright (C) 2015 ETD Solutions, SARL Etudoo. Tous droits réservés.
+ * @license      Propriétaire
+ * @author       ETD Solutions http://www.etd-solutions.com
+**/
+
+//
+// Base
+// ---------------------------------------
+
+#mq {
+  position: absolute;
+  top: -5000px;
+  left: 0;
+}
+
+@media (min-width:1024px){
+  #mq{left:10px}
+}
+
+@media (min-width:1600px){
+  #mq{left:20px}
+}
+
+.separator {
+  background: none repeat scroll 0 0 #000;
+  margin: 15px auto 20px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  position: relative;
+  .text-hide();
+
+  &:before, &:after {
+    content:'';
+    height:1px;
+    position:
+    absolute;
+    top:50%;
+    background-color:#c3c3c3;
+    width:45px
+  }
+
+  &:before {
+    right:13px
+  }
+
+  &:after {
+    left:13px
+  }
+}
+
+.loader {
+  position:absolute;left:0;right:0;bottom:0;top:0
+}
+.loader{background:#000;background:rgba(0,0,0,0.75);z-index:100;visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0);-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-o-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;}
+.loader .circle{position:absolute;left:50%;top:50%;margin-top:-30px;margin-left:-30px;width:56px;height:56px;border:2px solid #666;-webkit-border-radius:30px;border-radius:30px}
+.loader .sk-countdown-circle{top:-2px;left:-2px}
+.loader .status{position:absolute;left:50%;top:50%;margin-top:-30px;margin-left:-30px;width:60px;height:60px;line-height:62px;text-align:center;color:#fff;font-weight:bold;font-size:16px}
+#page-loader{bottom:0;top:0}
+.loader-main .circle,.loader-main .sk-countdown-circle,.loader-main .status{display:none}
+.loader-main .logo{position:absolute;left:50%;top:50%;width:223px;height:133px;margin:-62px 0 0 -112px}
+.loader-main .logo-bar{opacity:.15;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";filter:alpha(opacity=15)}
+.loader-main .logo-status{width:0}
+.sk-countdown-circle{font-size:60px !important;width:1em;height:1em;}
+.ie7 .sk-countdown-circle,.ie8 .sk-countdown-circle{display:none}
+.sk-countdown-circle,.sk-countdown-circle .sk-countdown-clip,.sk-countdown-circle .sk-countdown-bar{position:absolute;left:0;top:0}
+.sk-countdown-circle .sk-countdown-clip{width:.5em;height:1em;overflow:hidden}
+.sk-countdown-circle .sk-countdown-bar{width:52px;height:52px;border:4px solid #fff;-webkit-border-radius:.5em;border-radius:.5em;clip:rect(0,.5em,1em,0)}
+.sk-countdown-circle .sk-countdown-clip + .sk-countdown-clip{left:.5em;}
+.sk-countdown-circle .sk-countdown-clip + .sk-countdown-clip .sk-countdown-bar{left:auto;right:0;clip:rect(0,1em,1em,.5em)}
+
+// Navbar
+// --------------------------
+
+.navbar {
+  box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.1);
+
+  > .container-fluid {
+
+    .navbar-header {
+      min-height: 1px;
+      width: 117px;
+    }
+
+    .navbar-brand {
+      position: absolute;
+      display: inline-block;
+      top: 10px;
+      left: 15px;
+      margin: 0;
+      padding: 5px;
+      width: 117px;
+      height: 90px;
+      .text-hide();
+      background: #fff url(../img/logo-80.jpg) 50% 50% no-repeat;
+      z-index: 2;
+      .border-bottom-radius(@border-radius-base - 1);
+    }
+
+    .border-fix {
+      position: absolute;
+      display: block;
+      top: 50px;
+      left: 14px;
+      width: 119px;
+      height: 51px;
+      background: @navbar-default-border;
+      z-index: 1;
+      .border-bottom-radius(@border-radius-base);
+      box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .navbar-right {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    right: 15px;
+  }
+
+  .navbar-nav {
+    float: none;
+    width: 800px;
+    margin: 0 auto;
+  }
+
+}
+
+@media (max-width:1024px){
+  .navbar-nav > li {
+    font-size: 13px;
+
+    > a {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+// Main
+// --------------------------
+
+main[role="main"] {
+  padding-top: @navbar-height;
+
+  header {
+
+    h1 {
+      margin: 0;
+      text-shadow: 1px 1px fade(#000,20%);
+      font-size: 48px;
+      line-height: 1;
+      text-align: center;
+      background: fade(#000,15%);
+      padding: 20px 0;
+      color: #fff;
+    }
+
+    .bg.responsive {
+      height: 350px;
+      background-position: 50% 50%;
+      padding-top: 130px;
+
+      &.img-1024 {
+        height: 350px;
+      }
+
+      &.img-1600 {
+        height: 500px;
+        padding-top: 210px;
+
+        h1 {
+          font-size: 54px;
+        }
+      }
+
+      &.img-1920 {
+        height: 600px;
+        padding-top: 240px;
+
+        h1 {
+          font-size: 76px;
+        }
+      }
+    }
+  }
+}
+
+.btn-transparent {
+  .button-variant(#fff; transparent; #fff);
+}
+
+// Footer
+// --------------------------
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  line-height: 28px;
+  padding: 0 20px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0px -1px 0 rgba(0, 0, 0, 0.1);
+  z-index: 200;
+  color: #000;
+
+  .nav {
+    //margin: 0 auto;
+    //width: 500px;
+
+    > li {
+      display: inline-block;
+
+      > a {
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+.description {
+  background: @marron;
+  padding: 20px 0;
+  text-align: center;
+  border: solid 1px darken(@marron, 2%);
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
